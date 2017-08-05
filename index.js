@@ -17,3 +17,7 @@ function save () {
     })
   })
 }
+
+window.addEventListener('keydown', function (e) {
+  if (e.keyCode == 80) save()
+})
