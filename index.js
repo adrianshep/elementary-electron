@@ -7,6 +7,7 @@ picture.remove()
 var image = require('lightning-image-poly')
 var viz = new image('#visualization', null, [src], {hullAlgorithm: 'convex'})
 
+// function that will save the current window to a PDF
 function save () {
   remote.getCurrentWindow().webContents.printToPDF({
     portrait: true
@@ -18,6 +19,7 @@ function save () {
   })
 }
 
+// event listener that will call your save() function when P is pressed
 window.addEventListener('keydown', function (e) {
   if (e.keyCode == 80) save()
 })
