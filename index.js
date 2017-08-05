@@ -1,4 +1,6 @@
 // require('cat-picture')
+var remote = require('electron').remote
+var fs = require('fs')
 var picture = require('cat-picture')
 var src = picture.src
 picture.remove()
